@@ -55,8 +55,7 @@ a:hover {
 }
 
 code {
-  background: #1a1a1a;
-  padding: 0.2em 0.4em;
+  padding: 0.2em 0.2em;
   border-radius: 3px;
 }
 
@@ -70,6 +69,12 @@ pre {
 .terminal-prompt::before {
   content: "$ ";
   color: var(--accent);
+}
+
+.prose p,
+.prose pre {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1,
