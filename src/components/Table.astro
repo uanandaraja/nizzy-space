@@ -1,0 +1,13 @@
+---
+interface Props extends astroHTML.JSX.TableHTMLAttributes {
+  class?: string;
+}
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<table class:list={["w-full border-0 outline-none m-0 p-0 relative border-spacing-0", className]} {...rest}>
+  <tbody>
+    <slot />
+  </tbody>
+</table> 

@@ -1,0 +1,17 @@
+---
+interface Props extends astroHTML.JSX.TdHTMLAttributes {
+  class?: string;
+}
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<td 
+  class:list={[
+    "border-0 outline-none m-0 p-0 transition-colors duration-500 ease-in-out pl-[1ch] first:pl-0",
+    className
+  ]} 
+  {...rest}
+>
+  <slot />
+</td> 

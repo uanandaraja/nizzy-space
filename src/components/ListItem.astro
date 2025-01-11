@@ -1,0 +1,17 @@
+---
+interface Props extends astroHTML.JSX.HTMLAttributes {
+  class?: string;
+}
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<li 
+  class:list={[
+    "pl-[1ch] focus:outline-none focus:bg-[var(--theme-focused-foreground)]",
+    className
+  ]} 
+  {...rest}
+>
+  <slot />
+</li> 
