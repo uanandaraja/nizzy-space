@@ -1,7 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Divider from '../components/Divider.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -12,29 +12,32 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body class="p-4 leading-relaxed min-h-screen">
 		<Header />
-		<main class="max-w-3xl border border-[var(--theme-border)] mx-auto mt-12 p-8">
-			<div class="mb-12">
-				<p class="text-[var(--theme-primary)] text-xl mb-4">$ whoami</p>
-				<div class="ml-4">
-					<p class="text-[var(--theme-text)] text-lg">Unies Ananda Raja</p>
+		<main class="max-w-3xl border border-[var(--theme-border)] mx-auto mt-6 p-8">
+			<div class="mb-4">
+				<div>
+					<p class="text-[var(--theme-text)] text-3xl">Unies Ananda Raja</p>
 					<p class="text-[var(--theme-text)]">Current: Product Lead @ Bahasa.ai | Jakarta, Indonesia</p>
-					<p class="mt-4 text-[var(--theme-focused-foreground)]">I love AI. I built product. I market product.</p>
+					<p class="mt-4 text-[var(--theme-focused-foreground)]">Building, tinkering, and productizing new AI models.</p>
 				</div>
 			</div>
 
+			<Divider type="GRADIENT" class="my-8" />
+
 			<div class="mb-12">
-				<p class="text-[var(--theme-primary)] text-xl mb-4">$ cat work.txt</p>
-				<div class="ml-4">
-					<div class="mb-8">
+				<p class="text-[var(--theme-text)] text-xl mb-4">WORK</p>
+				<div>
+					<div>
 						<p class="text-[var(--theme-text)] text-lg">Product Lead at Bahasa.ai</p>
 						<p class="text-[var(--theme-text)]">December 2023 - Now</p>
 						<ul class="list-disc ml-4 mt-2 text-[var(--theme-text)] space-y-2">
-							<li>My startup (transkrp.xyz) was acquired by Bahasa.ai</li>
+							<li>My startup (transkrip.xyz) was acquired by Bahasa.ai</li>
 							<li>Lead product development for Meeting.ai & Transkrip.com</li>
 							<li>Doubled total revenue, grew user base to 100K+</li>
 							<li>Leading new product initiative: Sound.so</li>
 						</ul>
 					</div>
+
+					<Divider type="SINGLE" class="my-4" />
 
 					<div>
 						<p class="text-[var(--theme-text)] text-lg">Founder at Transkrip.xyz</p>

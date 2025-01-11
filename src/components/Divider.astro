@@ -1,0 +1,45 @@
+---
+interface Props {
+  type?: 'GRADIENT' | 'DOUBLE' | 'SINGLE';
+  class?: string;
+  style?: string;
+}
+
+const { type = 'SINGLE', class: className, style } = Astro.props;
+---
+
+{type === 'GRADIENT' && (
+  <div 
+    class:list={[
+      'w-full h-4 flex items-center',
+      'bg-gradient-to-r from-transparent via-[var(--theme-border)] to-transparent',
+      className
+    ]}
+    style={style}
+  />
+)}
+
+{type === 'DOUBLE' && (
+  <div 
+    class:list={[
+      'w-full h-8 flex flex-col items-center justify-center',
+      className
+    ]}
+    style={style}
+  >
+    <div class="w-full h-[1px] bg-[var(--theme-text)] mb-1" />
+    <div class="w-full h-[1px] bg-[var(--theme-text)]" />
+  </div>
+)}
+
+{type === 'SINGLE' && (
+  <div 
+    class:list={[
+      'w-full h-8 flex items-center justify-center',
+      className
+    ]}
+    style={style}
+  >
+    <div class="w-full h-[1px] bg-[var(--theme-text)]" />
+  </div>
+)} 

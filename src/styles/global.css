@@ -71,7 +71,7 @@
   --theme-background-modal: var(--color-gray-80);
   --theme-background-modal-footer: var(--color-gray-70);
   --theme-background-input: var(--color-gray-60);
-  --theme-border: var(--color-gray-80);
+  --theme-border: var(--color-white);
   --theme-border-subdued: var(--color-gray-70-3);
   --theme-primary: var(--color-gold-30);
   --theme-text: var(--color-white);
