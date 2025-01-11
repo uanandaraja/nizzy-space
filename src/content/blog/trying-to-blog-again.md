@@ -2,7 +2,6 @@
 title: "Trying to blog again"
 description: "Will I be successful this time?"
 pubDate: "Nov 16 2024"
-heroImage: "/blog-placeholder-4.jpg"
 ---
 
 Every now and then I felt like I have to write. Last time it was late 2020 when I first got a job after a covid layoff. I tried to do a 30 days writing challenge in October 2020. But failed to finish the challenge after 8 days if not mistaken. I did it on Medium. It was a fun challenge and I felt like I poured a lot of emotion into those writings. You could still read it now if you search up for it. It is mostly in Indonesian though.
