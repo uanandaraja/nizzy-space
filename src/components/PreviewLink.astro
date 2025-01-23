@@ -1,0 +1,33 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  previewImageUrl?: string;
+}
+
+const { href, title, description, previewImageUrl } = Astro.props;
+---
+
+<div class="relative group inline-block font-mono">
+  <div class="absolute left-0 bottom-full mb-2 w-[48rem] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+    <div class="bg-[var(--theme-background)] border border-[var(--theme-border)] p-4 font-mono">
+      {previewImageUrl && (
+        <img src={previewImageUrl} alt={title} class="w-full h-auto max-h-[24rem] object-contain mb-2 border border-[var(--theme-border)]" />
+      )}
+    </div>
+  </div>
+
+  <a href={href} class="text-[var(--theme-text)] hover:text-[var(--theme-focused-foreground)]">{href}</a>
+</div>
+
+<style>
+  .group:hover .absolute {
+    transform: translateY(0);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .absolute {
+    transform: translateY(4px);
+  }
+</style> 

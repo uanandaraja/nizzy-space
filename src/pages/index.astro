@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Divider from '../components/Divider.astro';
+import PreviewLink from '../components/PreviewLink.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -24,30 +25,86 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 			<Divider type="GRADIENT" class="my-8" />
 
-			<div class="mb-12">
+			<div>
 				<p class="text-[var(--theme-text)] text-xl mb-4">WORK</p>
-				<div>
-					<div>
-						<p class="text-[var(--theme-text)] text-lg">Product Engineer at Bahasa.ai</p>
-						<p class="text-[var(--theme-text)]">December 2023 - Now</p>
+				<div class="space-y-4">
+					<details class="group">
+						<summary class="cursor-pointer list-none">
+							<div class="flex justify-between items-center">
+								<div>
+									<p class="text-[var(--theme-text)] text-lg">Product Engineer at Bahasa.ai</p>
+									<p class="text-[var(--theme-text)]">December 2023 - Now</p>
+								</div>
+								<div class="transform group-open:rotate-180 transition-transform">
+									<span class="text-[var(--theme-text)]">▼</span>
+								</div>
+							</div>
+						</summary>
 						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2">
 							<li class="flex items-start"><span class="mr-2">◆</span>Develop and maintain Transkrip.com, the leading transcription app used by more than 100,000 users in Indonesia.</li>
 							<li class="flex items-start"><span class="mr-2">◆</span>Redesigned the landing page which increases conversion rate from 1% to 5%.</li>
 							<li class="flex items-start"><span class="mr-2">◆</span>Increased monthly revenue from IDR35 million to IDR100 million in two quarters through organic growth, paid ads, and customer focused and iterative product development.</li>
 							<li class="flex items-start"><span class="mr-2">◆</span>Technologies: Next.js, React, TailwindCSS, Shadcn UI</li>
 						</ul>
-					</div>
+					</details>
 
 					<Divider type="SINGLE" class="my-4" />
 
-					<div>
-						<p class="text-[var(--theme-text)] text-lg">Founder at Transkrip.xyz</p>
-						<p class="text-[var(--theme-text)]">April 2023 - November 2023</p>
+					<details class="group">
+						<summary class="cursor-pointer list-none">
+							<div class="flex justify-between items-center">
+								<div>
+									<p class="text-[var(--theme-text)] text-lg">Founder at Transkrip.xyz</p>
+									<p class="text-[var(--theme-text)]">April 2023 - November 2023</p>
+								</div>
+								<div class="transform group-open:rotate-180 transition-transform">
+									<span class="text-[var(--theme-text)]">▼</span>
+								</div>
+							</div>
+						</summary>
 						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2">
 							<li class="flex items-start"><span class="mr-2">◆</span>Developed the leading transcription app for students and professionals in Indonesia from 0 to more than 50,000 users in months from
 organic growth, mainly social media and SEO.</li>
 							<li class="flex items-start"><span class="mr-2">◆</span>Grew monthly revenue from IDR0 to IDR35 million.</li>
 							<li class="flex items-start"><span class="mr-2">◆</span>Technologies: Python, Flask, Express, React, Next.js, Postgres, Vercel, Docker, GCP , AWS</li>
+						</ul>
+					</details>
+				</div>
+			</div>
+
+			<Divider type="GRADIENT" class="my-8" />
+
+			<div>
+				<p class="text-[var(--theme-text)] text-xl mb-4">PROJECTS</p>
+				<div>
+					<div>
+						<p class="text-[var(--theme-text)] text-lg">Rangkumin (2025)</p>
+						<PreviewLink 
+							href="https://rangkumin.xyz" 
+							title="Rangkumin"
+							description="A webapp to summarize Youtube and PDF materials for students. Utilizes LLM for summarization and ASR model for transcription. Built with modern web technologies for optimal performance."
+							previewImageUrl='/rangkumin-screenshot.webp'
+						/>
+						<p class="mt-2 text-[var(--theme-text)]">A webapp to summarize Youtube and PDF materials for students. Utilizes LLM for summarization, ASR model for transcription.</p>
+						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2">
+							<li class="flex items-start"><span class="mr-2">◆</span>Frontend: React, Typescript, TailwindCSS, Vite</li>
+							<li class="flex items-start"><span class="mr-2">◆</span>Backend: Hono, Typescript, Postgres, Drizzle ORM</li>
+							<li class="flex items-start"><span class="mr-2">◆</span>AI Service: Hono, Bun, Typescript</li>
+						</ul>
+					</div>
+
+					<div class="mt-8">
+						<p class="text-[var(--theme-text)] text-lg">Buatcoverletter (2024)</p>
+						<PreviewLink 
+							href="https://buatcoverletter.com" 
+							title="Buatcoverletter"
+							description="A webapp to generate customized cover letter based on user's CV and job posting they wanted to apply."
+							previewImageUrl='/buatcoverletter.webp'
+						/>
+						<p class="mt-2 text-[var(--theme-text)]">A webapp to generate customized cover letter based on user's CV and job posting they wanted to apply.</p>
+						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2">
+							<li class="flex items-start"><span class="mr-2">◆</span>Frontend and Backend: Nextjs, TailwindCSS, ShadcnUI, Postgres, Drizzle ORM, Vercel</li>
+							<li class="flex items-start"><span class="mr-2">◆</span>AI Service: Python, Fast API, Docker, Fly.io</li>
 						</ul>
 					</div>
 				</div>
