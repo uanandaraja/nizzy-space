@@ -76,7 +76,7 @@ organic growth, mainly social media and SEO.</li>
 
 			<div>
 				<p class="text-[var(--theme-text)] text-xl mb-4">PROJECTS</p>
-				<div>
+				<div class="space-y-4">
 					<div>
 						<p class="text-[var(--theme-text)] text-lg">Rangkumin (2025)</p>
 						<PreviewLink 
@@ -85,15 +85,31 @@ organic growth, mainly social media and SEO.</li>
 							description="A webapp to summarize Youtube and PDF materials for students. Utilizes LLM for summarization and ASR model for transcription. Built with modern web technologies for optimal performance."
 							previewImageUrl='/rangkumin-screenshot.webp'
 						/>
-						<p class="mt-2 text-[var(--theme-text)]">A webapp to summarize Youtube and PDF materials for students. Utilizes LLM for summarization, ASR model for transcription.</p>
-						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2">
-							<li class="flex items-start"><span class="mr-2">◆</span>Frontend: React, Typescript, TailwindCSS, Vite</li>
-							<li class="flex items-start"><span class="mr-2">◆</span>Backend: Hono, Typescript, Postgres, Drizzle ORM</li>
-							<li class="flex items-start"><span class="mr-2">◆</span>AI Service: Hono, Bun, Typescript</li>
-						</ul>
+						<details class="group mt-2">
+							<summary class="cursor-pointer list-none">
+								<div class="flex justify-between items-center">
+									<div>
+										<p class="text-[var(--theme-text)]">View Details</p>
+									</div>
+									<div class="transform group-open:rotate-180 transition-transform">
+										<span class="text-[var(--theme-text)]">▼</span>
+									</div>
+								</div>
+							</summary>
+							<div class="mt-2">
+								<p class="mt-2 text-[var(--theme-text)]">A webapp to summarize Youtube and PDF materials for students. Utilizes LLM for summarization, ASR model for transcription.</p>
+								<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2">
+									<li class="flex items-start"><span class="mr-2">◆</span>Frontend: React, Typescript, TailwindCSS, Vite</li>
+									<li class="flex items-start"><span class="mr-2">◆</span>Backend: Hono, Typescript, Postgres, Drizzle ORM</li>
+									<li class="flex items-start"><span class="mr-2">◆</span>AI Service: Hono, Bun, Typescript</li>
+								</ul>
+							</div>
+						</details>
 					</div>
 
-					<div class="mt-8">
+					<Divider type="SINGLE" class="my-4" />
+
+					<div>
 						<p class="text-[var(--theme-text)] text-lg">Buatcoverletter (2024)</p>
 						<PreviewLink 
 							href="https://buatcoverletter.com" 
@@ -101,11 +117,25 @@ organic growth, mainly social media and SEO.</li>
 							description="A webapp to generate customized cover letter based on user's CV and job posting they wanted to apply."
 							previewImageUrl='/buatcoverletter.webp'
 						/>
-						<p class="mt-2 text-[var(--theme-text)]">A webapp to generate customized cover letter based on user's CV and job posting they wanted to apply.</p>
-						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2">
-							<li class="flex items-start"><span class="mr-2">◆</span>Frontend and Backend: Nextjs, TailwindCSS, ShadcnUI, Postgres, Drizzle ORM, Vercel</li>
-							<li class="flex items-start"><span class="mr-2">◆</span>AI Service: Python, Fast API, Docker, Fly.io</li>
-						</ul>
+						<details class="group mt-2">
+							<summary class="cursor-pointer list-none">
+								<div class="flex justify-between items-center">
+									<div>
+										<p class="text-[var(--theme-text)]">View Details</p>
+									</div>
+									<div class="transform group-open:rotate-180 transition-transform">
+										<span class="text-[var(--theme-text)]">▼</span>
+									</div>
+								</div>
+							</summary>
+							<div class="mt-2">
+								<p class="mt-2 text-[var(--theme-text)]">A webapp to generate customized cover letter based on user's CV and job posting they wanted to apply.</p>
+								<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2">
+									<li class="flex items-start"><span class="mr-2">◆</span>Frontend and Backend: Nextjs, TailwindCSS, ShadcnUI, Postgres, Drizzle ORM, Vercel</li>
+									<li class="flex items-start"><span class="mr-2">◆</span>AI Service: Python, Fast API, Docker, Fly.io</li>
+								</ul>
+							</div>
+						</details>
 					</div>
 				</div>
 			</div>
