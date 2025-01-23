@@ -8,10 +8,57 @@ const { class: className, ...rest } = Astro.props;
 
 <li 
   class:list={[
-    "pl-[1ch] focus:outline-none focus:bg-[var(--theme-focused-foreground)]",
+    "focus:outline-none focus:bg-[var(--theme-focused-foreground)] transition-colors duration-200 list-none",
     className
   ]} 
+  tabindex="0"
   {...rest}
 >
   <slot />
-</li> 
+</li>
+
+<script>
+  function findNextFocusable(element: Element | null, direction: 'next' | 'previous'): HTMLElement | null {
+    if (!element) return null;
+
+    const focusables = Array.from(document.querySelectorAll('[tabindex="0"]'));
+    const currentIndex = focusables.indexOf(element);
+
+    if (currentIndex === -1) return null;
+
+    const nextIndex = direction === 'next' 
+      ? (currentIndex + 1) % focusables.length
+      : (currentIndex - 1 + focusables.length) % focusables.length;
+
+    return focusables[nextIndex] as HTMLElement;
+  }
+
+  document.querySelectorAll('li[tabindex="0"]').forEach(item => {
+    item.addEventListener('keydown', (event) => {
+      const key = (event as KeyboardEvent).key;
+      
+      switch (key) {
+        case 'Enter':
+          event.preventDefault();
+          (item as HTMLElement).click();
+          break;
+        case 'ArrowUp':
+        case 'ArrowLeft': {
+          event.preventDefault();
+          const previousFocusable = findNextFocusable(document.activeElement, 'previous');
+          previousFocusable?.focus();
+          break;
+        }
+        case 'ArrowDown':
+        case 'ArrowRight': {
+          event.preventDefault();
+          const nextFocusable = findNextFocusable(document.activeElement, 'next');
+          nextFocusable?.focus();
+          break;
+        }
+        default:
+          break;
+      }
+    });
+  });
+</script> 

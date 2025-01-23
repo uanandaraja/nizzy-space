@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Divider from '../components/Divider.astro';
 import PreviewLink from '../components/PreviewLink.astro';
+import ListItem from '../components/ListItem.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -13,13 +14,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body class="p-4 leading-relaxed min-h-screen">
 		<Header />
-		<main class="max-w-3xl border border-[var(--theme-border)] mx-auto mt-6 p-8">
+		<main class="max-w-3xl border border-[var(--theme-border)] mx-auto mt-2 p-8">
 			<div class="mb-4">
 				<div>
 					<p class="text-[var(--theme-text)] text-3xl">Unies Ananda Raja</p>
 					<p class="text-[var(--theme-text)]">Current: Product Engineer @ Bahasa.ai | Jakarta, Indonesia</p>
 					<p class="mt-4 mb- 4 text-[var(--theme-focused-foreground)]">Building, tinkering, and productizing new AI models.</p>
-          <a href="https://storage.nizzy.xyz/CV_Unies_Ananda.pdf" class="mt-4 inline-block">Link to my CV</a>
+          			<a href="https://storage.nizzy.xyz/CV_Unies_Ananda.pdf" class="mt-4 inline-block" target="_blank" rel="noopener noreferrer">Link to my CV</a>
 				</div>
 			</div>
 
@@ -78,7 +79,7 @@ organic growth, mainly social media and SEO.</li>
 				<p class="text-[var(--theme-text)] text-xl mb-4">PROJECTS</p>
 				<div class="space-y-4">
 					<div>
-						<p class="text-[var(--theme-text)] text-lg">Rangkumin (2025)</p>
+						<ListItem class="text-[var(--theme-text)] text-lg">Rangkumin</ListItem>
 						<PreviewLink 
 							href="https://rangkumin.xyz" 
 							title="Rangkumin"
@@ -110,7 +111,7 @@ organic growth, mainly social media and SEO.</li>
 					<Divider type="SINGLE" class="my-4" />
 
 					<div>
-						<p class="text-[var(--theme-text)] text-lg">Buatcoverletter (2024)</p>
+						<ListItem class="text-[var(--theme-text)] text-lg">Buatcoverletter</ListItem>
 						<PreviewLink 
 							href="https://buatcoverletter.com" 
 							title="Buatcoverletter"
