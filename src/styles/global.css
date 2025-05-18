@@ -86,10 +86,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "TX02Mono-Regular", monospace;
+  font-family: "MEK sans", monospace;
   background: var(--theme-background);
   color: var(--theme-text);
   line-height: 1.6;
+  font-size: 16px;
 }
 
 @font-face {
@@ -100,18 +101,15 @@ body {
 }
 
 @font-face {
-  font-family: 'TX02Mono-Regular';
-  src: url('/fonts/TX02Mono-Regular.woff2') format('woff2');
+  font-family: "MEK sans";
+  src: url("/fonts/MEKSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "TX02Mono-Regular", monospace;
-  background: var(--theme-background);
-  color: var(--theme-text);
-  line-height: 1.6;
-  font-size: 16px;
+@font-face {
+  font-family: 'TX02Mono-Regular';
+  src: url('/fonts/TX02Mono-Regular.woff2') format('woff2');
 }
 
 main {

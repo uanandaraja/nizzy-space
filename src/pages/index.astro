@@ -12,36 +12,36 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="p-4 leading-relaxed min-h-screen">
+	<body class="p-4 leading-relaxed min-h-screen text-lg">
 		<Header />
 		<main class="max-w-3xl border border-[var(--theme-border)] mx-auto mt-2 p-8">
 			<div class="mb-4">
 				<div>
-					<p class="text-[var(--theme-text)] text-3xl">Unies Ananda Raja</p>
-					<p class="text-[var(--theme-text)]">Current: xAI | Jakarta, Indonesia</p>
-					<p class="mt-4 mb- 4 text-[var(--theme-focused-foreground)]">Working with AI and stuff.</p>
-          			<a href="https://storage.nizzy.xyz/CV_Unies%20Ananda.pdf" class="mt-4 inline-block" target="_blank" rel="noopener noreferrer">Link to my CV</a>
+					<p class="text-[var(--theme-text)] text-5xl">UNIES ANANDA RAJA</p>
+					<p class="text-[var(--theme-text)] text-xl">Current: xAI | Jakarta, Indonesia</p>
+					<p class="mt-4 mb- 4 text-[var(--theme-focused-foreground)] text-lg">Working with AI and stuff.</p>
+          			<a href="https://storage.nizzy.xyz/CV_Unies%20Ananda.pdf" class="mt-4 inline-block text-lg" target="_blank" rel="noopener noreferrer">Link to my CV</a>
 				</div>
 			</div>
 
 			<Divider type="GRADIENT" class="my-8" />
 
 			<div>
-				<p class="text-[var(--theme-text)] text-xl mb-4">WORK</p>
+				<p class="text-[var(--theme-text)] text-2xl mb-4">WORK</p>
 				<div class="space-y-4">
 					<details class="group">
 						<summary class="cursor-pointer list-none">
 							<div class="flex justify-between items-center">
 								<div>
-									<p class="text-[var(--theme-text)] text-lg">AI Tutor at xAI</p>
-									<p class="text-[var(--theme-text)]">March 2025</p>
+									<p class="text-[var(--theme-text)] text-xl">AI Tutor at xAI</p>
+									<p class="text-[var(--theme-text)] text-lg">March 2025</p>
 								</div>
 								<div class="transform group-open:rotate-180 transition-transform">
 									<span class="text-[var(--theme-text)]">▼</span>
 								</div>
 							</div>
 						</summary>
-						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2">
+						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2 text-lg">
 							<li class="flex items-start"><span class="mr-2">◆</span>Create and curate high quality data for training and evaluating AI models based on the principles of reinforcement learning with human feedback.</li>
 						</ul>
 					</details>
@@ -52,15 +52,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						<summary class="cursor-pointer list-none">
 							<div class="flex justify-between items-center">
 								<div>
-									<p class="text-[var(--theme-text)] text-lg">Product Engineer at Bahasa.ai</p>
-									<p class="text-[var(--theme-text)]">December 2023 - February 2025</p>
+									<p class="text-[var(--theme-text)] text-xl">Product Engineer at Bahasa.ai</p>
+									<p class="text-[var(--theme-text)] text-lg">December 2023 - February 2025</p>
 								</div>
 								<div class="transform group-open:rotate-180 transition-transform">
 									<span class="text-[var(--theme-text)]">▼</span>
 								</div>
 							</div>
 						</summary>
-						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2">
+						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2 text-lg">
 							<li class="flex items-start"><span class="mr-2">◆</span>Develop and maintain Transkrip.com, the leading transcription app used by more than 100,000 users in Indonesia.</li>
 							<li class="flex items-start"><span class="mr-2">◆</span>Redesigned the landing page which increases conversion rate from 1% to 5%.</li>
 							<li class="flex items-start"><span class="mr-2">◆</span>Increased monthly revenue from IDR35 million to IDR100 million in two quarters through organic growth, paid ads, and customer focused and iterative product development.</li>
@@ -74,15 +74,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						<summary class="cursor-pointer list-none">
 							<div class="flex justify-between items-center">
 								<div>
-									<p class="text-[var(--theme-text)] text-lg">Founder at Transkrip.xyz</p>
-									<p class="text-[var(--theme-text)]">April 2023 - November 2023</p>
+									<p class="text-[var(--theme-text)] text-xl">Founder at Transkrip.xyz</p>
+									<p class="text-[var(--theme-text)] text-lg">April 2023 - November 2023</p>
 								</div>
 								<div class="transform group-open:rotate-180 transition-transform">
 									<span class="text-[var(--theme-text)]">▼</span>
 								</div>
 							</div>
 						</summary>
-						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2">
+						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2 text-lg">
 							<li class="flex items-start"><span class="mr-2">◆</span>Developed the leading transcription app for students and professionals in Indonesia from 0 to more than 50,000 users in months from
 organic growth, mainly social media and SEO.</li>
 							<li class="flex items-start"><span class="mr-2">◆</span>Grew monthly revenue from IDR0 to IDR35 million.</li>
@@ -92,73 +92,6 @@ organic growth, mainly social media and SEO.</li>
 				</div>
 			</div>
 
-			<Divider type="GRADIENT" class="my-8" />
-
-			<div>
-				<p class="text-[var(--theme-text)] text-xl mb-4">PROJECTS</p>
-				<div class="space-y-4">
-					<div>
-						<ListItem class="text-[var(--theme-text)] text-lg">Rangkumin</ListItem>
-						<PreviewLink 
-							href="https://rangkumin.xyz" 
-							title="Rangkumin"
-							description="A webapp to summarize Youtube and PDF materials for students. Utilizes LLM for summarization and ASR model for transcription. Built with modern web technologies for optimal performance."
-							previewImageUrl='/rangkumin-screenshot.webp'
-						/>
-						<details class="group mt-2">
-							<summary class="cursor-pointer list-none">
-								<div class="flex justify-between items-center">
-									<div>
-										<p class="text-[var(--theme-text)]">View Details</p>
-									</div>
-									<div class="transform group-open:rotate-180 transition-transform">
-										<span class="text-[var(--theme-text)]">▼</span>
-									</div>
-								</div>
-							</summary>
-							<div class="mt-2">
-								<p class="mt-2 text-[var(--theme-text)]">A webapp to summarize Youtube and PDF materials for students. Utilizes LLM for summarization, ASR model for transcription.</p>
-								<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2">
-									<li class="flex items-start"><span class="mr-2">◆</span>Frontend: React, Typescript, TailwindCSS, Vite</li>
-									<li class="flex items-start"><span class="mr-2">◆</span>Backend: Hono, Typescript, Postgres, Drizzle ORM</li>
-									<li class="flex items-start"><span class="mr-2">◆</span>AI Service: Hono, Bun, Typescript</li>
-								</ul>
-							</div>
-						</details>
-					</div>
-
-					<Divider type="SINGLE" class="my-4" />
-
-					<div>
-						<ListItem class="text-[var(--theme-text)] text-lg">Buatcoverletter</ListItem>
-						<PreviewLink 
-							href="https://buatcoverletter.com" 
-							title="Buatcoverletter"
-							description="A webapp to generate customized cover letter based on user's CV and job posting they wanted to apply."
-							previewImageUrl='/buatcoverletter.webp'
-						/>
-						<details class="group mt-2">
-							<summary class="cursor-pointer list-none">
-								<div class="flex justify-between items-center">
-									<div>
-										<p class="text-[var(--theme-text)]">View Details</p>
-									</div>
-									<div class="transform group-open:rotate-180 transition-transform">
-										<span class="text-[var(--theme-text)]">▼</span>
-									</div>
-								</div>
-							</summary>
-							<div class="mt-2">
-								<p class="mt-2 text-[var(--theme-text)]">A webapp to generate customized cover letter based on user's CV and job posting they wanted to apply.</p>
-								<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2">
-									<li class="flex items-start"><span class="mr-2">◆</span>Frontend and Backend: Nextjs, TailwindCSS, ShadcnUI, Postgres, Drizzle ORM, Vercel</li>
-									<li class="flex items-start"><span class="mr-2">◆</span>AI Service: Python, Fast API, Docker, Fly.io</li>
-								</ul>
-							</div>
-						</details>
-					</div>
-				</div>
-			</div>
 		</main>
 	</body>
 </html>
