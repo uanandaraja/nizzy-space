@@ -66,19 +66,19 @@
   --color-white-4: rgba(255, 255, 255, 0.4);
 
   /* Theme variables */
-  --theme-overlay: rgba(0, 0, 0, 0.4);
-  --theme-background: #000080;  /* Classic DOS blue */
-  --theme-background-modal: #000066;
-  --theme-background-modal-footer: #000055;
-  --theme-background-input: #000044;
-  --theme-border: #C0C0C0;  /* Light gray border */
-  --theme-text: #C0C0C0;  /* Light gray text */
-  --theme-button: #C0C0C0;
-  --theme-button-text: #000080;
-  --theme-button-foreground: #A0A0A0;
-  --theme-button-background: #000066;
-  --theme-focused-foreground: #FFFFFF;
-  --theme-focused-foreground-subdued: rgba(255, 255, 255, 0.7);
+  --theme-overlay: rgba(0, 0, 0, 0.1);
+  --theme-background: #e6e6e6;  /* Light gray background */
+  --theme-background-modal: #d9d9d9;
+  --theme-background-modal-footer: #cccccc;
+  --theme-background-input: #f2f2f2;
+  --theme-border: #4d4d4d;  /* Dark gray border matching text */
+  --theme-text: #4d4d4d;  /* Dark gray text */
+  --theme-button: #0000ff;  /* Blue buttons */
+  --theme-button-text: #ffffff;  /* White button text */
+  --theme-button-foreground: #666666;  /* Medium gray for secondary text */
+  --theme-button-background: #0000cc;
+  --theme-focused-foreground: #0000ff;  /* Blue for focused/highlighted elements */
+  --theme-focused-foreground-subdued: rgba(0, 0, 255, 0.7);
 }
 
 body {
@@ -89,7 +89,6 @@ body {
   color: var(--theme-text);
   line-height: 1.6;
   font-size: 18px;
-  text-shadow: 0 0 1px rgba(192, 192, 192, 0.3);  /* Subtle text glow */
 }
 
 @font-face {
@@ -116,7 +115,6 @@ main {
   margin: 0 auto;
   padding: 2rem;
   background: var(--theme-background);
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);  /* Subtle vignette effect */
 }
 
 a {
@@ -128,17 +126,16 @@ a {
 a:hover {
   color: var(--theme-focused-foreground);
   text-decoration: none;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 code {
   padding: 0.2em 0.2em;
   border-radius: 3px;
-  background: rgba(192, 192, 192, 0.1);
+  background: rgba(0, 0, 255, 0.05);
 }
 
 pre {
-  background: #000066;
+  background: #d9d9d9;
   padding: 1rem;
   border-radius: 5px;
   border: 1px solid var(--theme-border);
@@ -158,7 +155,6 @@ pre {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--theme-focused-foreground);
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
 }
 
 .dim {
