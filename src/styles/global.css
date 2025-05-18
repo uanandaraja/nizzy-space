@@ -66,21 +66,19 @@
   --color-white-4: rgba(255, 255, 255, 0.4);
 
   /* Theme variables */
-  --theme-overlay: var(--color-black-100-4);
-  --theme-background: var(--color-black-100);
-  --theme-background-modal: var(--color-gray-80);
-  --theme-background-modal-footer: var(--color-gray-70);
-  --theme-background-input: var(--color-gray-60);
-  --theme-border: var(--color-white);
-  --theme-border-subdued: var(--color-gray-70-3);
-  --theme-primary: var(--color-gold-30);
-  --theme-text: var(--color-white);
-  --theme-button: var(--color-white);
-  --theme-button-text: var(--color-black-100);
-  --theme-button-foreground: var(--color-gray-90);
-  --theme-button-background: var(--color-gray-80);
-  --theme-focused-foreground: var(--color-daybreak-10);
-  --theme-focused-foreground-subdued: var(--color-daybreak-10-5);
+  --theme-overlay: rgba(0, 0, 0, 0.4);
+  --theme-background: #000080;  /* Classic DOS blue */
+  --theme-background-modal: #000066;
+  --theme-background-modal-footer: #000055;
+  --theme-background-input: #000044;
+  --theme-border: #C0C0C0;  /* Light gray border */
+  --theme-text: #C0C0C0;  /* Light gray text */
+  --theme-button: #C0C0C0;
+  --theme-button-text: #000080;
+  --theme-button-foreground: #A0A0A0;
+  --theme-button-background: #000066;
+  --theme-focused-foreground: #FFFFFF;
+  --theme-focused-foreground-subdued: rgba(255, 255, 255, 0.7);
 }
 
 body {
@@ -90,7 +88,8 @@ body {
   background: var(--theme-background);
   color: var(--theme-text);
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 18px;
+  text-shadow: 0 0 1px rgba(192, 192, 192, 0.3);  /* Subtle text glow */
 }
 
 @font-face {
@@ -116,32 +115,39 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  background: var(--theme-background);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);  /* Subtle vignette effect */
 }
 
 a {
-  color: var(--accent);
+  color: var(--theme-text);
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--theme-focused-foreground);
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 code {
   padding: 0.2em 0.2em;
   border-radius: 3px;
+  background: rgba(192, 192, 192, 0.1);
 }
 
 pre {
-  background: #1a1a1a;
+  background: #000066;
   padding: 1rem;
   border-radius: 5px;
+  border: 1px solid var(--theme-border);
   overflow-x: auto;
 }
 
 .terminal-prompt::before {
   content: "$ ";
-  color: var(--accent);
+  color: var(--theme-focused-foreground);
 }
 
 .prose p,
@@ -150,17 +156,13 @@ pre {
   margin-bottom: 1rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--accent);
+h1, h2, h3, h4, h5, h6 {
+  color: var(--theme-focused-foreground);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
 }
 
 .dim {
-  color: var(--gray);
+  color: var(--theme-button-foreground);
 }
 
 /* Blink animation for cursor */
@@ -170,8 +172,7 @@ h6 {
 }
 
 @keyframes blink {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 1;
   }
   50% {

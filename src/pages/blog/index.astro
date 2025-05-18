@@ -27,10 +27,10 @@ const posts = (await getCollection('blog')).sort(
 					<Table>
 						<TableRow>
 							<TableColumn>
-								<span class="text-[var(--theme-text)]">Title</span>
+								<span class="text-[var(--theme-text)] text-xl">Title</span>
 							</TableColumn>
 							<TableColumn>
-								<span class="text-[var(--theme-text)]">Published</span>
+								<span class="text-[var(--theme-text)] text-xl">Published</span>
 							</TableColumn>
 						</TableRow>
 						<TableRow>
@@ -41,12 +41,12 @@ const posts = (await getCollection('blog')).sort(
 						{posts.map((post) => (
 							<TableRow>
 								<TableColumn>
-									<a href={`/blog/${post.slug}/`} class="text-[var(--theme-text)] text-lg hover:underline">
+									<a href={`/blog/${post.slug}/`} class="text-[var(--theme-text)] text-xl hover:underline">
 										{post.data.title}
 									</a>
 								</TableColumn>
 								<TableColumn>
-									<p class="text-[var(--theme-text)]">{post.data.pubDate.toLocaleDateString()}</p>
+									<p class="text-[var(--theme-text)] text-xl">{post.data.pubDate.toLocaleDateString()}</p>
 								</TableColumn>
 							</TableRow>
 						))}
