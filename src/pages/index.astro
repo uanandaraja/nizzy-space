@@ -2,23 +2,25 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Divider from '../components/Divider.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_MAIN_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={SITE_MAIN_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="p-4 leading-relaxed min-h-screen text-lg">
+	<body class="p-4 leading-relaxed min-h-screen text-base">
 		<Header />
 		<main class="max-w-3xl border border-[var(--theme-border)] mx-auto mt-2 p-8">
 			<div class="mb-4">
 				<div>
-					<p class="text-[var(--theme-text)] text-5xl">UNIES ANANDA RAJA</p>
-					<p class="text-[var(--theme-text)] text-xl">Current: xAI | Jakarta, Indonesia</p>
-					<p class="mt-4 mb- 4 text-[var(--theme-focused-foreground)] text-lg">Working with AI and stuff.</p>
-          			<a href="https://storage.nizzy.xyz/CV_Unies%20Ananda.pdf" class="mt-4 inline-block text-lg" target="_blank" rel="noopener noreferrer">Link to my CV</a>
+					<p class="text-[var(--theme-text)] text-3xl sm:text-4xl mb-2">UNIES ANANDA RAJA</p>
+					<p class="text-[var(--theme-text)] text-xl">Jakarta, Indonesia</p>
+					<p class="mt-4 mb-4 text-[var(--theme-focused-foreground)] text-base">Working with AI and stuff.</p>
+	          			<a href="https://storage.nizzy.xyz/CV_Unies%20Ananda.pdf" class="mt-4 inline-block text-base" target="_blank" rel="noopener noreferrer">Link to my CV</a>
+	          			<span class="mx-3 text-base text-[var(--theme-text)]">•</span>
+	          			<a href="mailto:uanandaraja@gmail.com" class="mt-4 inline-block text-base">My email</a>
 				</div>
 			</div>
 
@@ -27,66 +29,51 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<div>
 				<p class="text-[var(--theme-text)] text-2xl mb-4">WORK</p>
 				<div class="space-y-4">
-					<details class="group">
-						<summary class="cursor-pointer list-none">
-							<div class="flex justify-between items-center">
-								<div>
-									<p class="text-[var(--theme-text)] text-xl">AI Tutor at xAI</p>
-									<p class="text-[var(--theme-text)] text-lg">March 2025</p>
-								</div>
-								<div class="transform group-open:rotate-180 transition-transform">
-									<span class="text-[var(--theme-text)]">▼</span>
-								</div>
+					<div>
+						<div class="flex justify-between items-center">
+							<div>
+								<p class="text-[var(--theme-text)] text-xl">AI Tutor at xAI</p>
+								<p class="text-[var(--theme-text)] text-base">March 2025 - September 2025</p>
 							</div>
-						</summary>
-						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2 text-lg">
-							<li class="flex items-start"><span class="mr-2">◆</span>Create and curate high quality data for training and evaluating AI models based on the principles of reinforcement learning with human feedback.</li>
+						</div>
+						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2 text-base">
+							<li class="flex items-start"><span class="mr-2">◆</span>Produce high-quality data labeling for text, images, and videos to train Grok, ensuring data integrity and model reliability.</li>
+							<li class="flex items-start"><span class="mr-2">◆</span>Performed quality assurance for data labeling to maintain high data quality standards.</li>
 						</ul>
-					</details>
+					</div>
 
 					<Divider type="SINGLE" class="my-4" />
 
-					<details class="group">
-						<summary class="cursor-pointer list-none">
-							<div class="flex justify-between items-center">
-								<div>
-									<p class="text-[var(--theme-text)] text-xl">Product Engineer at Bahasa.ai</p>
-									<p class="text-[var(--theme-text)] text-lg">December 2023 - February 2025</p>
-								</div>
-								<div class="transform group-open:rotate-180 transition-transform">
-									<span class="text-[var(--theme-text)]">▼</span>
-								</div>
+					<div>
+						<div class="flex justify-between items-center">
+							<div>
+								<p class="text-[var(--theme-text)] text-xl">Product Engineer at Bahasa.ai</p>
+								<p class="text-[var(--theme-text)] text-base">December 2023 - February 2025</p>
 							</div>
-						</summary>
-						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2 text-lg">
+						</div>
+						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2 text-base">
 							<li class="flex items-start"><span class="mr-2">◆</span>Develop and maintain Transkrip.com, the leading transcription app used by more than 100,000 users in Indonesia.</li>
 							<li class="flex items-start"><span class="mr-2">◆</span>Redesigned the landing page which increases conversion rate from 1% to 5%.</li>
 							<li class="flex items-start"><span class="mr-2">◆</span>Increased monthly revenue from IDR35 million to IDR100 million in two quarters through organic growth, paid ads, and customer focused and iterative product development.</li>
 							<li class="flex items-start"><span class="mr-2">◆</span>Technologies: Next.js, React, TailwindCSS, Shadcn UI</li>
 						</ul>
-					</details>
+					</div>
 
 					<Divider type="SINGLE" class="my-4" />
 
-					<details class="group">
-						<summary class="cursor-pointer list-none">
-							<div class="flex justify-between items-center">
-								<div>
-									<p class="text-[var(--theme-text)] text-xl">Founder at Transkrip.xyz</p>
-									<p class="text-[var(--theme-text)] text-lg">April 2023 - November 2023</p>
-								</div>
-								<div class="transform group-open:rotate-180 transition-transform">
-									<span class="text-[var(--theme-text)]">▼</span>
-								</div>
+					<div>
+						<div class="flex justify-between items-center">
+							<div>
+								<p class="text-[var(--theme-text)] text-xl">Founder at Transkrip.xyz</p>
+								<p class="text-[var(--theme-text)] text-base">April 2023 - November 2023</p>
 							</div>
-						</summary>
-						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2 text-lg">
-							<li class="flex items-start"><span class="mr-2">◆</span>Developed the leading transcription app for students and professionals in Indonesia from 0 to more than 50,000 users in months from
-organic growth, mainly social media and SEO.</li>
+						</div>
+						<ul class="ml-4 mt-2 text-[var(--theme-text)] space-y-2 text-base">
+							<li class="flex items-start"><span class="mr-2">◆</span>Developed the leading transcription app for students and professionals in Indonesia from 0 to more than 50,000 users in months from organic growth, mainly social media and SEO.</li>
 							<li class="flex items-start"><span class="mr-2">◆</span>Grew monthly revenue from IDR0 to IDR35 million.</li>
 							<li class="flex items-start"><span class="mr-2">◆</span>Technologies: Python, Flask, Express, React, Next.js, Postgres, Vercel, Docker, GCP , AWS</li>
 						</ul>
-					</details>
+					</div>
 				</div>
 			</div>
 

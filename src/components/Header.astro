@@ -1,13 +1,11 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
 ---
 
 <header class="bg-base text-text p-4">
 	<nav class="max-w-3xl mx-auto flex justify-start space-x-4 text-xl">
 		<HeaderLink href="/">Home</HeaderLink>
 		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="https://github.com/uanandaraja">Github</HeaderLink>
+		<HeaderLink href="https://github.com/uanandaraja" target="_blank" rel="noopener noreferrer">Github</HeaderLink>
 	</nav>
 </header>
-

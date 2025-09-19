@@ -20,7 +20,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			<div class="mb-12">
 				<div class="ml-4">
 					<div class="mb-4">
-						<h1 class="text-[var(--theme-text)] text-5xl">{title}</h1>
+						<h1 class="text-[var(--theme-text)] text-4xl">{title}</h1>
 						<p class="text-[var(--theme-text)] mt-2">
 							<FormattedDate date={pubDate} />
 							{updatedDate && 
@@ -37,7 +37,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 					<Divider type="SINGLE" />
 
-					<div class="prose prose-invert max-w-none prose-p:my-4 prose-pre:my-4 prose-2xl text-xl">
+					<div class="prose prose-invert max-w-none prose-p:my-4 prose-pre:my-4 text-base">
 						<slot />
 					</div>
 				</div>
