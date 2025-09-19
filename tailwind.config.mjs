@@ -20,7 +20,7 @@ export default {
         },
       },
       fontFamily: {
-        mono: ["JetBrains Mono", "Menlo", "Monaco", "Courier New", "monospace"],
+        mono: ["Fira Code", "JetBrains Mono", "Menlo", "Monaco", "Courier New", "monospace"],
       },
     },
   },
